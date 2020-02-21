@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secure_eye/login_page.dart';
 import 'package:secure_eye/registration_page.dart';
 import 'landing_page.dart';
 
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LandingPage.id:(context) => LandingPage(),
         RegistrationPage.id:(context) => RegistrationPage(),
+        LoginPage.id:(context) => LoginPage()
       },
     );
   }

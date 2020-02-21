@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:secure_eye/components/rounded_button.dart';
 import 'package:secure_eye/registration_page.dart';
+import 'package:secure_eye/login_page.dart';
 class LandingPage extends StatefulWidget {
 
   static const String id='landing_page';
@@ -51,8 +52,8 @@ class _LandingPageState extends State<LandingPage> {
             ),
             Rounded_button(title: 'Log In'
               ,colour: Colors.grey[500],onPressed: (){
-            // Navigator.pushNamed(context,LoginScreen.id2 );
-            },),
+             Navigator.pushNamed(context,LoginPage.id );
+            }),
             Rounded_button(title: 'Register',colour: Colors.grey[500], onPressed: (){
               Navigator.pushNamed(context, RegistrationPage.id);
             })
