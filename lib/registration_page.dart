@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:secure_eye/components/rounded_button.dart';
 
 class RegistrationPage extends StatefulWidget {
@@ -18,20 +17,30 @@ class _RegistrationPageState extends State<RegistrationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            Hero(
+              tag: 'sky_logo',
+              child: Container(
+                height: 200,
+                child: Image.asset('images/skylogo.png',),
+                color: Colors.grey,
+
+              ),
+            ),
+            SizedBox(height: 10,),
             TextField(
               textAlign: TextAlign.center,
               onChanged: (value) {
                 name=value;
               },
               decoration:InputDecoration(
-                icon: Icon(Icons.person),
+                icon: Icon(Icons.person,color: Colors.lightBlueAccent),
                 hintText: 'Enter your Name',
                 contentPadding:
                 EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
@@ -55,7 +64,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 id=value;
               },
               decoration:InputDecoration(
-                icon: Icon(Icons.email),
+                icon: Icon(Icons.email,color: Colors.lightBlueAccent),
                 hintText: 'Enter your Email',
                 contentPadding:
                 EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
@@ -79,7 +88,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 number=value;
               },
               decoration:InputDecoration(
-                icon: Icon(Icons.phone),
+                icon: Icon(Icons.phone,color: Colors.lightBlueAccent),
                 hintText: 'Enter your Number',
                 contentPadding:
                 EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
@@ -104,7 +113,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                    email=value;
                 },
                 decoration:InputDecoration(
-                  icon: Icon(Icons.visibility),
+                  icon: Icon(Icons.visibility,color: Colors.lightBlueAccent,),
                   hintText: 'Enter your password',
                   contentPadding:
                   EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
@@ -123,8 +132,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
             ),
             SizedBox(height: 12),
             Rounded_button(
+              onPressed: (){},
               title: 'Register',
-              colour: Colors.grey,
+              colour: Colors.white,
             ),
           ],
         ),

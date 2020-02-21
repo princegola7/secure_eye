@@ -26,13 +26,16 @@ class _LandingPageState extends State<LandingPage> {
                 children: <Widget>[
                   CircleAvatar(
                     radius: 50,
-                    backgroundColor: Colors.black12,
-                    child: Container(
-                      child: Image.asset('images/secure_Eye.png'),
-                      height: 60.0,
+                    backgroundColor: Colors.grey,
+                    child: Hero(
+                      tag: 'sky_logo',
+                      child: Container(
+                        child: Image.asset('images/skylogo.png'),
+                        height: 60.0,
+                      ),
                     ),
                   ),
-                  SizedBox(width: 10,),
+                  SizedBox(width: 5,),
                   Text(
                     'Secure Eye',
                     style: TextStyle(
