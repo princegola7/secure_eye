@@ -110,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 12),
               Rounded_button(
                 onPressed: (){},
-                title: 'Register',
+                title: 'Log in',
                 colour: Colors.lightBlueAccent,
               ),
             ],
